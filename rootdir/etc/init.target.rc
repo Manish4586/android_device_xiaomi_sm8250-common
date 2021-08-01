@@ -401,3 +401,11 @@ on post-fs-data
     restorecon /sys/module/migt/parameters/stask_candidate_num
     chmod 0777 /sys/module/migt/parameters/fas_power_mod
     restorecon /sys/module/migt/parameters/fas_power_mod
+
+on property:sys.boot_completed=1
+    # Set up swap
+    write /sys/devices/virtual/block/vbswap0/disksize 3221225472
+    write /proc/sys/vm/swappiness 190
+    write /proc/sys/vm/page-cluster 0
+    swapon_all /vendor/etc/fstab.qcom
+
