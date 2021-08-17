@@ -345,6 +345,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.nfc.rc \
     init.qcom.factory.rc \
+    init.qcom.power.rc \
     init.qcom.rc \
     init.target.rc \
     init.target.wigig.rc \
