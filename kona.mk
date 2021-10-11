@@ -94,10 +94,6 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service_64 \
     vendor.qti.hardware.camera.postproc@1.0.vendor
-
-# Charger
-PRODUCT_PACKAGES += \
-    libsuspend
     
 # Component overrides
 PRODUCT_COPY_FILES += \
@@ -119,9 +115,6 @@ PRODUCT_PACKAGES += \
     
 #Display
 $(call inherit-product, $(LOCAL_PATH)/kona/display/display.mk)
-
-# Dalvik
-PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := verify
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -231,8 +224,7 @@ PRODUCT_PACKAGES += \
     
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay
     
 # OTA
 PRODUCT_HOST_PACKAGES += \
